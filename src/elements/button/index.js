@@ -4,6 +4,10 @@ import propTypes from "prop-types";
 
 export default function Button(props) {
   const className = [props.className];
+
+  // Jadi misal nanti button ditambah atribut isPrimary di Pages , maka ia akan memiliki className btn-primary
+  // Contoh :
+  // <Button isPrimary>Click Here</button>
   if (props.isPrimary) className.push("btn-primary");
   if (props.isLarge) className.push("btn-lg");
   if (props.isSmall) className.push("btn-sm");
@@ -19,6 +23,7 @@ export default function Button(props) {
     return (
       <span className={className.join(" ")} style={props.style}>
         {props.isLoading ? (
+          // Dibawah ini adalah react.fragment
           <>
             <span className="spinner-border spinner-border-sm mx-5"></span>
             <span className="sr-only">Loading ...</span>
@@ -33,7 +38,7 @@ export default function Button(props) {
   if (props.type === "link") {
     if (props.isExternal) {
       return (
-        <a href={props.href} className={className.join(" ")} style={props.style} target={props.target === "_blank" ? "_blank" : undefined} rel={props.target === "_blank" ? "noopener noreferrer" : undefined}>
+        <a href={props.href} className={className.join(" ")} style={props.style}>
           {props.children}
         </a> //secara default semua komponen mempunyai props.children yang isinya sebagai string dalam tag
       );
