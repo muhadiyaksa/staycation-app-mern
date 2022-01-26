@@ -17,6 +17,7 @@
 @import "reboot";
 @import "type";
 @import "images";
+@import "container-grid";
 @import "containers";
 @import "grid";
 @import "tables";
@@ -62,12 +63,15 @@
   position: absolute;
   padding-top: 5px;
   border-bottom: 2px solid $color;
-  width: 90%;
+  width: 80%;
   animation-name: slide;
   animation-duration: 0.3s;
   margin: auto;
 }
 
+.container {
+  font-family: "Poppins", sans-serif;
+}
 .brand-text-icon {
   font-size: 26px;
   font-weight: 500;
@@ -130,11 +134,70 @@ header {
   }
 }
 
+.hero {
+  margin-top: 60px;
+  p {
+    width: 320px;
+    margin: 20px 0px 30px 0px;
+    color: $gray-700;
+    font-size: 14px;
+  }
+
+  .info {
+    margin-top: 80px;
+
+    img {
+      max-height: 36px;
+      transition: 0.3s;
+      &:hover {
+        transform: translateY(-7px);
+      }
+    }
+    h6 {
+      color: $secondary;
+
+      span {
+        margin-left: 5px;
+        color: $gray-600;
+      }
+    }
+  }
+
+  .image-hero {
+    position: relative;
+    justify-self: flex-end;
+
+    img {
+      max-width: 535px;
+      position: absolute;
+      transition: 0.1s;
+
+      &:nth-child(1) {
+        top: 0;
+        right: 20px;
+        z-index: 1;
+      }
+      &:nth-child(2) {
+        top: 20px;
+        right: 0px;
+        z-index: 0;
+      }
+    }
+  }
+}
+
+section {
+  margin-bottom: 70px;
+}
+.card {
+  height: 100%;
+}
+
 @keyframes slide {
   0% {
     width: 0%;
   }
   100% {
-    width: 90%;
+    width: 80%;
   }
 }

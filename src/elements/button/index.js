@@ -69,5 +69,6 @@ Button.propTypes = {
   isLarge: propTypes.bool, //button hanya menerima true atau false untuk proses milih ini button besar atau engga
   isBlock: propTypes.bool, //button hanya menerima true atau false untuk proses milih ini button block atau engga
   isExternal: propTypes.bool, //button hanya menerima true atau false untuk proses milih ini mengarah ke link external atau engga
+  isPrimary: propTypes.bool,
   hasShadow: propTypes.bool, //button hanya menerima true atau false untuk proses milih ini button punya shadow atau engga
 };
