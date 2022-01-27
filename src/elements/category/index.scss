@@ -1,0 +1,55 @@
+.gridCategory {
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .image {
+    height: 160px;
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #ff658a;
+      border-radius: 0 10px 0 20px;
+      color: white;
+      padding: 0px 20px;
+      height: 40px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      transition: 0.3s;
+
+      &.flex {
+        display: flex;
+      }
+      &.none {
+        display: none;
+      }
+    }
+  }
+  .content {
+    color: #252525;
+    margin-top: 10px;
+
+    h5 {
+      font-weight: 600;
+      color: #252525;
+    }
+  }
+
+  &:hover {
+    .image {
+      .info {
+        right: -50%;
+      }
+    }
+  }
+}
