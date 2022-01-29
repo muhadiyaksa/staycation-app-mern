@@ -10,15 +10,18 @@ export default function Category(props) {
 
   return (
     <div className="gridCategory">
-      <div class="image">
+      <div className="image">
         <img src={props.src} alt="" />
         <div className={`info ${className.join(" ")}`}>
           <p className="m-0 p-0">
-            <span class="fw-bold">Popular</span> Choice
+            <span className="fw-bold">Popular</span> Choice
           </p>
         </div>
+        <div className="price">
+          <p>Rp. {props.price}</p>
+        </div>
       </div>
-      <div class="content">
+      <div className="content">
         <Button type="link" href={props.href} className="btn p-0">
           <h5>{props.name}</h5>
         </Button>

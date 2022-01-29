@@ -126,5 +126,17 @@
         }
       ]
     }
-  ]
+  ],
+
+  "testimonial": {
+    "_id": "asd123441276",
+    "imageUrl": "/image/ulasan1.jpg",
+    "name": "Happy Experience",
+    "rate": 4.7,
+    "content": "this holiday was very memorable, my brother and I really enjoyed it and we will do it again later ...",
+    "familyName": "Kyle",
+    "hotel": "villa khayangan",
+    "cityHotel": "Bogor",
+    "countryHotel": "Indonesia"
+  }
 }

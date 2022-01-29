@@ -20,20 +20,21 @@ export default function Hero(props) {
 
   const mouseHoverImg = (e) => {
     const imgHero = document.querySelector(".hero .image-hero img:nth-child(1)");
-    const imgHeroLine = document.querySelector(".hero .image-hero img:nth-child(2)");
     const posisiX = e.pageX;
     const posisiY = e.pageY;
     const posisiValue = imgHero.getBoundingClientRect();
-    const posisiValueLine = imgHeroLine.getBoundingClientRect();
 
-    imgHeroLine.style.top = 20 - Math.floor((posisiY - posisiValue.top) / 20) + "px";
-    imgHeroLine.style.right = 20 - Math.floor((posisiValueLine.right - posisiX) / 20) + "px";
+    const posisiRL = (posisiValue.right - posisiValue.left) / 2;
+    const posisiCenterX = posisiRL + posisiValue.left;
+    const posisiTB = (posisiValue.bottom - posisiValue.top) / 2;
+    const posisiCenterY = posisiTB + posisiValue.top;
+
+    imgHero.style.transform = `rotateX(${Math.floor((posisiY - posisiCenterY) / 40)}deg) rotateY(${Math.floor((posisiX - posisiCenterX) / 40)}deg)`;
   };
 
   const mouseOverHoverImg = (e) => {
-    const imgHeroLine = document.querySelector(".hero .image-hero img:nth-child(2)");
-    imgHeroLine.style.top = "20px";
-    imgHeroLine.style.right = "0px";
+    const imgHero = document.querySelector(".hero .image-hero img:nth-child(1)");
+    imgHero.style.transform = `rotateX(0deg) rotateY(0deg)`;
   };
 
   return (

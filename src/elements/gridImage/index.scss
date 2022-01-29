@@ -1,10 +1,12 @@
+@import "../../assets/scss/colorVariabels";
+
 .gridImage {
   height: 100%;
   overflow: hidden;
   position: relative;
   border-radius: 10px;
-  border: 1px solid #dbdbdb;
-  background-color: #dbdbdb;
+  border: 1px solid $cream;
+  background-color: $cream;
 
   img {
     height: 100%;
@@ -22,11 +24,11 @@
     left: 0px;
     right: 0px;
     z-index: 4;
-    color: white;
+    color: $white;
     padding-top: 10px;
 
     p {
-      color: #ff658a;
+      color: $pink;
     }
   }
 
@@ -44,7 +46,7 @@
     position: absolute;
     bottom: 0;
     left: 20px;
-    color: white;
+    color: $white;
     z-index: 2;
 
     a {
@@ -55,7 +57,7 @@
       content: "";
       display: block;
       position: absolute;
-      border-bottom: 3px solid white;
+      border-bottom: 3px solid $white;
       width: 100%;
       animation-name: slide;
       animation-duration: 0.3s;
@@ -72,9 +74,9 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #ff658a;
+    background-color: $pink;
     border-radius: 0 0 0 20px;
-    color: white;
+    color: $white;
     padding: 0px 20px;
     height: 40px;
     text-align: center;
