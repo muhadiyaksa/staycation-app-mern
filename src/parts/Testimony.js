@@ -48,7 +48,7 @@ export default function Testimony({ data }) {
               {data.hotel}, {data.cityHotel} {data.countryHotel}
             </strong>
           </p>
-          <Button type="link" className="btn btn-primary px-5 py-3" hasShadow href="/ulasan">
+          <Button type="link" className="btn px-5 py-3" isPrimary hasShadow href="/ulasan">
             Read Their Story
           </Button>
         </div>
