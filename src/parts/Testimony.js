@@ -2,6 +2,7 @@ import React from "react";
 import Star from "../elements/star";
 import TestimonyFrame from "../assets/image/ulasan/ulasan1garis.png";
 import Button from "../elements/button";
+import Fade from "react-reveal/Fade";
 
 export default function Testimony({ data }) {
   let windowScroll;
@@ -32,26 +33,30 @@ export default function Testimony({ data }) {
   return (
     <section className="container">
       <div className="row testimonial">
-        <div className="col-md-5">
-          <div className="testimonial-hero">
-            <img src={data.imageUrl} alt="" onMouseMove={mouseHoverImg} onMouseLeave={mouseOverHoverImg} />
-            <img src={TestimonyFrame} alt="" />
+        <Fade bottom>
+          <div className="col-md-5">
+            <div className="testimonial-hero">
+              <img src={data.imageUrl} alt="" onMouseMove={mouseHoverImg} onMouseLeave={mouseOverHoverImg} />
+              <img src={TestimonyFrame} alt="" />
+            </div>
           </div>
-        </div>
-        <div className="col-md-7 content">
-          <h5>{data.name}</h5>
-          <Star value={4.6} width={30} height={30} spacing={1}></Star>
-          <h2 className="text-capitalize my-3">{data.content}</h2>
-          <p>
-            {data.familyName} from{" "}
-            <strong>
-              {data.hotel}, {data.cityHotel} {data.countryHotel}
-            </strong>
-          </p>
-          <Button type="link" className="btn px-5 py-3" isPrimary hasShadow href="/ulasan">
-            Read Their Story
-          </Button>
-        </div>
+        </Fade>
+        <Fade bottom delay={200}>
+          <div className="col-md-7 content">
+            <h5>{data.name}</h5>
+            <Star value={4.6} width={30} height={30} spacing={1}></Star>
+            <h2 className="text-capitalize my-3">{data.content}</h2>
+            <p>
+              {data.familyName} from{" "}
+              <strong>
+                {data.hotel}, {data.cityHotel} {data.countryHotel}
+              </strong>
+            </p>
+            <Button type="link" className="btn px-5 py-3" isPrimary hasShadow href="/ulasan">
+              Read Their Story
+            </Button>
+          </div>
+        </Fade>
       </div>
     </section>
     // <div>

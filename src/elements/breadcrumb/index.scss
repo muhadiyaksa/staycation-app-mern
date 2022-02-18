@@ -1,0 +1,22 @@
+@import "../../assets/scss/colorVariabels";
+
+.breadcrumb {
+  background-color: none;
+  .breadcrumb-item {
+    &:not(.active) {
+      a {
+        color: $gray-500;
+        text-decoration: none;
+        padding-right: 10px;
+      }
+    }
+    &.active {
+      &::before {
+        padding-right: 15px;
+        color: $gray-500;
+      }
+      color: $gray-900;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "_id": "asd2198411",
+  "name": "Hotel Up To Cloud",
+  "type": "hotel",
+  "country": "Indonesia",
+  "city": "Jakarta",
+  "price": "300000",
+  "isPopular": true,
+  "hasBackyard": true,
+  "description": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam voluptatem a repudiandae ducimus similique enim vel quaerat, sunt ipsa impedit modi eaque non, est, eligendi consectetur ad optio. Magnam, explicabo!</p>",
+  "features": [
+    {
+      "_id": "asd2198411",
+      "qty": "2",
+      "name": "bedroom",
+      "imageUrl": "/icon/icon-bedroom.svg"
+    },
+    {
+      "_id": "asd2198411",
+      "qty": "1",
+      "name": "bathroom",
+      "imageUrl": "/icon/icon-bathroom.svg"
+    },
+    {
+      "_id": "asd2198411",
+      "qty": "1",
+      "name": "Wifi",
+      "imageUrl": "/icon/icon-wifi.svg"
+    },
+    {
+      "_id": "asd2198411",
+      "qty": "1",
+      "name": "Televisions",
+      "imageUrl": "/icon/icon-televisions.svg"
+    },
+    {
+      "_id": "asd2198411",
+      "qty": "1",
+      "name": "Diningroom",
+      "imageUrl": "/icon/icon-diningroom.svg"
+    },
+    {
+      "_id": "asd2198411",
+      "qty": "1",
+      "name": "Swimming Pool",
+      "imageUrl": "/icon/icon-swim.svg"
+    }
+  ]
+}

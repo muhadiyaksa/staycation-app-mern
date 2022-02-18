@@ -9,12 +9,16 @@
   z-index: 3;
 
   &.sm {
-    grid-auto-rows: minmax(235px, auto);
+    grid-auto-rows: 220px;
     row-gap: 10px;
     column-gap: 10px;
   }
 
   .item {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+
     &.column-1 {
       grid-column-end: span 1;
     }
@@ -56,6 +60,11 @@
     }
     &.row-2 {
       grid-row-end: span 2;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   }
 }

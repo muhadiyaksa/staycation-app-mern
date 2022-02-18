@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACL,QAAQ,EAAE,QAAQ;EAClB,SAAS,EAAE,KAAK;EAChB,OAAO,EAAE,WAAW;CAerB;;AAlBD,AAKE,MALI,CAKJ,KAAK,CAAC;EACJ,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,WAAW;EACpB,IAAI,EAAE,2CAA2C,CAAC,SAAS,CAAC,MAAM,CAAC,IAAI;CASxE;;AAjBH,AASI,MATE,CAKJ,KAAK,AAIF,IAAK,CAAA,YAAY,EAAE;EAClB,OAAO,EAAE,CAAC;EACV,gBAAgB,ECKb,OAAO;CDJX;;AAZL,AAaI,MAbE,CAKJ,KAAK,AAQF,YAAY,CAAC;EACZ,OAAO,EAAE,CAAC;EACV,gBAAgB,ECZX,OAAO;CDab",
+    "sources": [
+        "../src/elements/star/index.scss",
+        "../src/assets/scss/_colorVariabels.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}

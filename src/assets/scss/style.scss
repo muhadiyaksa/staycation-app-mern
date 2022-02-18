@@ -124,7 +124,6 @@ header {
             font-weight: 400;
             font-size: 14px;
             position: relative;
-
             &:hover::after {
               @include hover-nav($secondary);
             }
@@ -229,6 +228,9 @@ header {
   }
 }
 
+.text-gray {
+  color: $gray-700;
+}
 .footer {
   margin-bottom: 0;
   background-color: $gray-200;

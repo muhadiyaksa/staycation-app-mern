@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 
 import ImgHero from "../assets/image/img-hero.jpg";
 import ImgHeroLine from "../assets/image/img-hero-line.jpg";
@@ -40,46 +41,50 @@ export default function Hero(props) {
   return (
     <section className="container hero">
       <div className="row">
-        <div className="col-md">
-          <h1 className="mb-3">
-            <span className="fw-bold">Forget</span> the <span className="fw-bold">Busy Work.</span>
-            <br />
-            <span className="fw-bold">Start</span> your next <span className="fw-bold">Vacation</span>
-          </h1>
-          <p>We provide what you need to enjoy your holiday with family,time to make another memorable moments.</p>
-          <Button className="btn px-5 py-3 fw-bold" type="button" hasShadow isPrimary onClick={showMostPicked}>
-            Show Me Now
-          </Button>
+        <Fade>
+          <div className="col-md">
+            <h1 className="mb-3">
+              <span className="fw-bold">Forget</span> the <span className="fw-bold">Busy Work.</span>
+              <br />
+              <span className="fw-bold">Start</span> your next <span className="fw-bold">Vacation</span>
+            </h1>
+            <p>We provide what you need to enjoy your holiday with family,time to make another memorable moments.</p>
+            <Button className="btn px-5 py-3 fw-bold" type="button" hasShadow isPrimary onClick={showMostPicked}>
+              Show Me Now
+            </Button>
 
-          <div className="row info">
-            <div className="col">
-              <img src={IconKoper} alt="travelers" />
-              <h6 className="fw-bold mt-3">
-                {numberFormat("28008")} <span className=" fw-300">travellers</span>
-              </h6>
-            </div>
-            <div className="col">
-              <img src={IconLocation} alt="Cities" />
-              <h6 className="fw-bold mt-3">
-                {numberFormat("2008")} <span className=" fw-300">Cities</span>
-              </h6>
-            </div>
-            <div className="col">
-              <img src={IconCamera} alt="treasures" />
-              <h6 className="fw-bold mt-3">
-                {/* <NumberFormat value={5699} displayType={"text"} thousandSeparator={true} /> */}
-                {numberFormat("5699")}
-                <span className="fw-300">treasures</span>
-              </h6>
+            <div className="row info">
+              <div className="col">
+                <img src={IconKoper} alt="travelers" />
+                <h6 className="fw-bold mt-3">
+                  {numberFormat("28008")} <span className=" fw-300">travellers</span>
+                </h6>
+              </div>
+              <div className="col">
+                <img src={IconLocation} alt="Cities" />
+                <h6 className="fw-bold mt-3">
+                  {numberFormat("2008")} <span className=" fw-300">Cities</span>
+                </h6>
+              </div>
+              <div className="col">
+                <img src={IconCamera} alt="treasures" />
+                <h6 className="fw-bold mt-3">
+                  {/* <NumberFormat value={5699} displayType={"text"} thousandSeparator={true} /> */}
+                  {numberFormat("5699")}
+                  <span className="fw-300">treasures</span>
+                </h6>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-md">
-          <div className="image-hero">
-            <img src={ImgHero} alt="Hero" className="img-fluid" onMouseMove={mouseHoverImg} onMouseLeave={mouseOverHoverImg} />
-            <img src={ImgHeroLine} alt="Hero line" className="img-fluid" />
+        </Fade>
+        <Fade>
+          <div className="col-md">
+            <div className="image-hero">
+              <img src={ImgHero} alt="Hero" className="img-fluid" onMouseMove={mouseHoverImg} onMouseLeave={mouseOverHoverImg} />
+              <img src={ImgHeroLine} alt="Hero line" className="img-fluid" />
+            </div>
           </div>
-        </div>
+        </Fade>
       </div>
     </section>
   );

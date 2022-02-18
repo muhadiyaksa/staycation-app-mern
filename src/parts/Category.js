@@ -1,6 +1,7 @@
 import React from "react";
 import CategoryCard from "../elements/category";
 import numberFormat from "../utils/numberFormat";
+import Fade from "react-reveal/Fade";
 
 export default function Category({ data }) {
   return data.map((category, index1) => {
@@ -15,11 +16,13 @@ export default function Category({ data }) {
           ) : (
             category.items.map((item, index) => {
               return (
-                <div className="item column-3 row-1" key={`category-${index1}-item-${index}`}>
-                  <div className="card">
-                    <CategoryCard src={item.imageUrl} name={item.name} city={item.city} isPopular={item.isPopular} href={`/properties/${item._id}`} price={numberFormat(item.price)} />
+                <Fade bottom delay={200 * +index} key={`category-${index1}-item-${index}`}>
+                  <div className="item column-3 row-1">
+                    <div className="card">
+                      <CategoryCard src={item.imageUrl} name={item.name} city={item.city} isPopular={item.isPopular} href={`/properties/${item._id}`} price={numberFormat(item.price)} />
+                    </div>
                   </div>
-                </div>
+                </Fade>
               );
             })
           )}

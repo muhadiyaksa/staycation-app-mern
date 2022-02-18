@@ -6,7 +6,7 @@ export default function Footer() {
     <section className="footer">
       <div className="container">
         <div className="row">
-          <div class="col">
+          <div className="col">
             <IconText />
             <p className="brand-tagline">We provide a variety of your vacation spots</p>
           </div>
@@ -50,7 +50,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div class="col-3">
+          <div className="col-3">
             <h6>Getting Touch</h6>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">

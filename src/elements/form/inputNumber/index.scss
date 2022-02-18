@@ -1,0 +1,41 @@
+@import "../../../assets/scss/colorVariabels";
+
+.input-group {
+  background-color: $white;
+
+  .input-group-text {
+    border: 0;
+    cursor: pointer;
+    color: $white;
+    padding: 0;
+    border-radius: 8px;
+    font-size: 36px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    &.minus {
+      background-color: $gray-300;
+      &:hover {
+        background-color: $gray-500;
+      }
+    }
+    &.plus {
+      background-color: $teal;
+      &:hover {
+        background-color: $tealnes;
+      }
+    }
+  }
+
+  input.form-control {
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+    background-color: $gray-100;
+    padding: 5px 10px;
+    text-align: center;
+  }
+}
