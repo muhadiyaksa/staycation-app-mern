@@ -12,6 +12,7 @@ export default function Button(props) {
   if (props.isLarge) className.push("btn-lg");
   if (props.isSmall) className.push("btn-sm");
   if (props.isBlock) className.push("btn-block");
+  if (props.isLight) className.push("btn-light");
   if (props.hasShadow) className.push("btn-shadow");
 
   const onClick = () => {
@@ -70,5 +71,6 @@ Button.propTypes = {
   isBlock: propTypes.bool, //button hanya menerima true atau false untuk proses milih ini button block atau engga
   isExternal: propTypes.bool, //button hanya menerima true atau false untuk proses milih ini mengarah ke link external atau engga
   isPrimary: propTypes.bool,
+  isLight: propTypes.bool,
   hasShadow: propTypes.bool, //button hanya menerima true atau false untuk proses milih ini button punya shadow atau engga
 };

@@ -20,6 +20,7 @@ export default class BookingForms extends Component {
         },
       },
     };
+    console.log(this.state);
   }
 
   updateData = (e) => {
@@ -34,6 +35,7 @@ export default class BookingForms extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     const { data } = this.state;
+    console.log(data);
     if (prevState.data.date !== data.date) {
       const startDate = new Date(data.date.startDate);
       const endDate = new Date(data.date.endDate);
@@ -65,17 +67,28 @@ export default class BookingForms extends Component {
   render() {
     const { data } = this.state;
     const { itemDetails, startBooking } = this.props;
-    console.log(itemDetails);
     return (
       <div className="card bordered" style={{ padding: "60px 70px" }}>
         <h4>Start Booking</h4>
         <h5 className="py-3">
-          Rp. {numberFormat(itemDetails.price)}
+          <span className="text-teal fs-3 me-3">Rp. {numberFormat(itemDetails.price)}</span>
           <span className="text-gray fw-light ">/ Nights</span>
         </h5>
 
         <label htmlFor="duration">How Long You Will Stay?</label>
         <InputNumber max={30} suffix={" night"} isSuffixPlural onChange={this.updateData} name="duration" value={data.duration} />
+
+        <label htmlFor="date">How Long You Will Stay?</label>
+        <InputDate onChange={this.updateData} name="date" value={data.date} />
+
+        <span>Payment Amount</span>
+        <h3 className="fw-bold ">
+          Rp. {numberFormat(+itemDetails.price * data.duration)} <span className="fs-5 fw-light d-block"> for {data.duration} Nights </span>
+        </h3>
+
+        <Button className="btn mt-4" hasShadow isPrimary isBlock onClick={startBooking}>
+          Continue to Book
+        </Button>
       </div>
     );
   }

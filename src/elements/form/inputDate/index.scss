@@ -3,17 +3,18 @@
 .input-date {
   .input-group {
     background-color: $white;
+    height: 55px;
     .input-group-text {
       pointer-events: none;
       border: 0;
       cursor: pointer;
       padding: 0;
       border-radius: 4px !important;
-      width: 45px;
-      height: 45px;
+      width: 55px;
+      height: 55px;
       display: flex;
       justify-content: center;
-      background-color: $gray-900;
+      background-color: $teal;
       position: absolute;
       z-index: 999;
     }
@@ -27,7 +28,7 @@
       text-align: center;
       justify-content: center;
       width: 100%;
-      height: 45px;
+      padding: 5px 10px;
     }
     .date-range-wrapper {
       padding: 4px;
@@ -35,7 +36,7 @@
       box-shadow: 0 0 20px rgba($black, 0.1);
       position: absolute;
       border-radius: 4px;
-      top: 45px;
+      top: 55px;
       z-index: 5;
     }
   }

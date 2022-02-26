@@ -7,7 +7,7 @@
   "price": "300000",
   "isPopular": true,
   "hasBackyard": true,
-  "description": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam voluptatem a repudiandae ducimus similique enim vel quaerat, sunt ipsa impedit modi eaque non, est, eligendi consectetur ad optio. Magnam, explicabo!</p>",
+  "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam voluptatem a repudiandae ducimus similique enim vel quaerat, sunt ipsa impedit modi eaque non, est, eligendi consectetur ad optio. Magnam, explicabo! ,Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam voluptatem a repudiandae ducimus similique enim vel quaerat, sunt ipsa impedit modi eaque non, est, eligendi consectetur ad optio. Magnam, explicabo!",
   "features": [
     {
       "_id": "asd2198411",
@@ -45,5 +45,60 @@
       "name": "Swimming Pool",
       "imageUrl": "/icon/icon-swim.svg"
     }
-  ]
+  ],
+  "categories": [
+    {
+      "_id": "qwe12311234",
+      "name": "Things To Do",
+      "items": [
+        {
+          "_id": "asd12312345",
+          "name": "Golf Center",
+          "imageUrl": "/image/vacation1.jpg",
+          "country": "Indonesia",
+          "city": "Ciwidey, Bandung",
+          "price": "300000",
+          "isPopular": false
+        },
+        {
+          "_id": "asd12312346",
+          "name": "Supermarket",
+          "imageUrl": "/image/vacation2.jpg",
+          "country": "Indonesia",
+          "city": "Malang",
+          "price": "350000",
+          "isPopular": false
+        },
+        {
+          "_id": "asd12312347",
+          "name": "Food Court",
+          "imageUrl": "/image/vacation3.jpg",
+          "country": "Indonesia",
+          "city": "Surabay",
+          "price": "400000",
+          "isPopular": false
+        },
+        {
+          "_id": "asd12312348",
+          "name": "Seatap Cafe",
+          "imageUrl": "/image/vacation4.jpg",
+          "country": "Indonesia",
+          "city": "Medan",
+          "price": "380000",
+          "isPopular": true
+        }
+      ]
+    }
+  ],
+  "testimonial": {
+    "_id": "asd123441276",
+    "imageUrl": "/image/ulasan1.jpg",
+    "name": "Happy Experience",
+    "rate": 4.7,
+    "content": "this holiday was very memorable, my brother and I really enjoyed it and we will do it again later ...",
+    "familyName": "Kyle",
+    "hotel": "villa khayangan",
+    "cityHotel": "Bogor",
+    "countryHotel": "Indonesia"
+  }
 }

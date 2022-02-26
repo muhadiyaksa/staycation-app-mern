@@ -1,21 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import "./index.scss";
 import propTypes from "prop-types";
 
 export default function Number(props) {
   const { value, placeholder, name, min, max, prefix, suffix, isSuffixPlural } = props;
 
-  const [InputValue, setInputValue] = useState(`${prefix}${value}${suffix}`);
-
   const onChange = (e) => {
     let value = String(e.target.value); //karna tadi di default.props itu prefix="" dan suffix="", maka digunakan untuk menimpa nilai tersebut
-    if (prefix) value = value.replace(prefix); //apabila prefixnya ada maka valuenya akan bernilai prefix
-    if (suffix) value = value.replace(suffix); //apabila suffixnya ada maka valuenya akan bernilai suffix
+    // if (prefix) value = value.replace(prefix); //apabila prefixnya ada maka valuenya akan bernilai prefix
+    // if (suffix) value = value.replace(suffix); //apabila suffixnya ada maka valuenya akan bernilai suffix
 
-    const patternTest = new RegExp("[0-9]*");
-    const isNumeric = patternTest.test(value); //apakah value terdiri dari angka 0-9
+    // const patternTest = new RegExp("[0-9]*");
+    // const isNumeric = patternTest.test(value); //apakah value terdiri dari angka 0-9
 
-    if (isNumeric && +value <= max && +value >= min) {
+    if (+value <= max && +value >= min) {
       console.log("benar");
       //props ini dapat diganti tergantung tombol mana yang diklik (minus atau plus)
       props.onChange({
@@ -24,7 +22,6 @@ export default function Number(props) {
           value: +value,
         },
       });
-      setInputValue(`${prefix}${value}${suffix}${isSuffixPlural && value > 1 ? "s" : ""}`);
     }
   };
 
@@ -59,7 +56,7 @@ export default function Number(props) {
             -
           </span>
         </div>
-        <input min={min} max={max} name={name} pattern="[0-9]*" className="form-control" placeholder={placeholder ? placeholder : "0"} value={String(InputValue)} onChange={onChange} />
+        <input min={min} max={max} name={name} pattern="[0-9]*" className="form-control" placeholder={placeholder ? placeholder : "0"} value={`${prefix}${value}${suffix}${isSuffixPlural && value > 1 ? "s" : ""}`} onChange={onChange} />
         <div className="input-group-append ">
           <span className="input-group-text plus" onClick={plus}>
             +

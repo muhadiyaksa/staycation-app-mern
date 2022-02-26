@@ -11,6 +11,18 @@ export default function Header(props) {
     }
   };
 
+  if (props.isCentered) {
+    return (
+      <header className="spacing-sm">
+        <div className="container">
+          <nav className="navbar navbar-expand-lg navbar-light justify-content-center">
+            <BrandIcon />
+          </nav>
+        </div>
+      </header>
+    );
+  }
+
   return (
     <header className="spacing-sm">
       <div className="container">
